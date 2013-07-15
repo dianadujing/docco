@@ -280,7 +280,7 @@ button{
   display: block;
 }
 .jump_page{
-  height: 200px;
+  max-height: 200px;
   padding: 5px 0 3px;
   margin: 0 0 25px 25px;
   overflow-y: auto;
@@ -297,6 +297,7 @@ button{
 
 .jump_page .source:hover {
   background: rgb(212, 85, 0);
+  font-weight: bold;
   border: 1px solid maroon;
   border-radius: 4px;
 }
@@ -310,6 +311,40 @@ button{
 
 #jump_choice{
   display: none;
+}
+
+/*--------------------- High resolutions (<450px) ----------------------*/
+@media only screen and (max-width: 450px) {
+#file_section{
+  width: 30px;
+  height: 10px;
+  display: none;
+}
+
+#jump_to{
+  width: 50px;
+  height: 20px;
+}
+#filelist,#filechoice{
+  width:65px;
+  height:20px;
+  font-size: 10px;
+  padding:1px;
+  float:right;
+  display: inline;
+}
+#filelist:hover,#filechoice:hover{
+  padding-left:1px;
+}
+#jump_to:hover #file_section{
+  padding-top:0;
+  float:right;
+  display:inline;
+}
+#jump_to:hover a.small{
+  display:none;
+}
+
 }
 
 /*---------------------- Low resolutions (> 320px) ---------------------*/
@@ -345,7 +380,15 @@ button{
     font-size: 12px;
     padding: 0 0.2em;
   }
+  .jump_page  .source{
+    font-size: 12px;
+    padding: 5px;
+  }
+
 }
+
+
+
 
 /*----------------------  (> 481px) ---------------------*/
 @media only screen and (min-width: 481px) {
